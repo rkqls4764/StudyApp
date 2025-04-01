@@ -1,6 +1,7 @@
 package com.example.studyapp.view
 
 import android.inputmethodservice.Keyboard
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -74,21 +75,11 @@ fun RecruitScreen() {
                     .padding(16.dp)
             ) {
                 items(studyList) { study ->
-                    StudyItem(study)
+                    StudyItem(study, onButtonClick = {
+                        // 스터디 참여 화면으로 이동
+                    })
                 }
             }
         }
-    }
-}
-
-@Composable
-fun StudyItem(studyName: String) {
-    Box(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
-    ) {
-        Text(
-            text = studyName,
-            modifier = Modifier.padding(16.dp)
-        )
     }
 }
