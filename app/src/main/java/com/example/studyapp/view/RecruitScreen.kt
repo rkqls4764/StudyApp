@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -51,7 +52,7 @@ fun RecruitScreen() {
                 onClick = { /*TODO*/ },
                 containerColor = colorResource(id = R.color.sub_blue)
             ) {
-                Icon(Icons.Filled.Add, contentDescription = "Add")
+                Icon(Icons.Filled.Add, contentDescription = "Add", tint = Color.White)
             }
         }
     ) { paddingValues ->
@@ -59,11 +60,13 @@ fun RecruitScreen() {
             Row {   // 검색 바
                 TextField( // 검색어 입력 필드
                     value = searchText,
-                    onValueChange = { /* viewModel 값 변경 */ },
-                    label = { Text("검색어") }
+                    onValueChange = { /* viewModel 값 변경 */ }
                 )
                 Button( // 검색 버튼
-                    onClick = { /*TODO*/ }
+                    onClick = { /*TODO*/ },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.Gray
+                    )
                 ) {
                     Text("검색")
                 }
