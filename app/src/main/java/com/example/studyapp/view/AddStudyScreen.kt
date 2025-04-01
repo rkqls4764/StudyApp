@@ -27,10 +27,11 @@ import com.example.studyapp.R
 @Composable
 fun AddStudyScreen() {
     val name = "이름"
-    val description = "설명"
     val date = "날짜"
     val time = "시간"
+    val description = "설명"
     val tag = "태그"
+    val method = "방식"
 
     Scaffold(
         topBar = {
@@ -56,14 +57,6 @@ fun AddStudyScreen() {
                 TextField(value = name, onValueChange = { /* viewModel 값 변경 */ })
             }
 
-            Row(    // 설명 입력 필드
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(text = "설명", fontWeight = FontWeight.Bold)
-                TextField(value = description, onValueChange = { /* viewModel 값 변경 */ })
-            }
-
             Row(    // 날짜 입력 필드
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
@@ -80,12 +73,28 @@ fun AddStudyScreen() {
                 TextField(value = time, onValueChange = { /* viewModel 값 변경 */ })
             }
 
+            Row(    // 설명 입력 필드
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "설명", fontWeight = FontWeight.Bold)
+                TextField(value = description, onValueChange = { /* viewModel 값 변경 */ })
+            }
+
             Row(    // 태그 입력 필드
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(text = "태그", fontWeight = FontWeight.Bold)
                 TextField(value = tag, onValueChange = { /* viewModel 값 변경 */ })
+            }
+
+            Row(    // 방식 입력 필드
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = "방식", fontWeight = FontWeight.Bold)
+                TextField(value = method, onValueChange = { /* viewModel 값 변경 */ })
             }
 
             Button( // 생성 버튼
