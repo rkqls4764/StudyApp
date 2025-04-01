@@ -75,7 +75,7 @@ fun RecruitScreen() {
                     .padding(16.dp)
             ) {
                 items(studyList) { study ->
-                    StudyItem(study, onButtonClick = {
+                    StudyItem(study, "참여하기", onButtonClick = {
                         // 스터디 참여 화면으로 이동
                     })
                 }

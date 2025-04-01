@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun StudyItem(studyName: String, onButtonClick: () -> Unit) {
+fun StudyItem(studyName: String, buttonName: String, onButtonClick: () -> Unit) {
     Box(
         modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
     ) {
@@ -28,7 +28,7 @@ fun StudyItem(studyName: String, onButtonClick: () -> Unit) {
                 onClick = onButtonClick,
                 modifier = Modifier.padding(16.dp)
             ) {
-                Text("참여하기")
+                Text(buttonName)
             }
         }
     }
