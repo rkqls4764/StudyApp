@@ -1,4 +1,4 @@
-package com.example.studyapp.view
+package com.example.studyapp.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,7 +15,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun StudyDetail() {
+fun DetailStudy() {
     val name = "Data Science 부트캠프"
     val description = "데이터 과학과 머신 러닝에 관심이 있는 사람들을 위한 스터디입니다. 매주 4번씩 정기적으로 모임을 가질 예정입니다."
     val date = "매주 월, 수, 금, 일"

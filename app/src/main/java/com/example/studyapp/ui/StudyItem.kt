@@ -1,4 +1,4 @@
-package com.example.studyapp.view
+package com.example.studyapp.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

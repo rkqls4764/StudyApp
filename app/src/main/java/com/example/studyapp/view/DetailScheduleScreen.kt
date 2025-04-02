@@ -17,12 +17,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import com.example.studyapp.R
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true)
 @Composable
-fun ScheduleDetail() {
+fun DetailScheduleScreen(navController: NavHostController) {
     val name = "머신 러닝 공부"
     val description = "머신 러닝 기본 개념 공부\n파이썬으로 선형 회귀 구현"
     val date = "2020년 5월 13일 수요일"

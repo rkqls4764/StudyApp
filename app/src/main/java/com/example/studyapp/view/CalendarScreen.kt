@@ -19,14 +19,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.example.studyapp.R
+import com.example.studyapp.ui.Calendar
+import com.example.studyapp.ui.ScheduleItem
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true)
 @Composable
-fun ScheduleScreen() {
+fun CalendarScreen(navController: NavHostController) {
     val name = "Data Science 부트캠프"
     val scheduleList = listOf("일정1", "일정2", "일정3")
 
@@ -50,12 +51,13 @@ fun ScheduleScreen() {
         }
     ) { paddingValues ->
         Column(
-            modifier = Modifier.fillMaxSize().padding(paddingValues),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues),
             verticalArrangement = Arrangement.Center
         ) {
-            // 캘린더
-            // 일정 목록
-            LazyColumn(
+            Calendar()  // 캘린더
+            LazyColumn( // 일정 목록
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(16.dp)
